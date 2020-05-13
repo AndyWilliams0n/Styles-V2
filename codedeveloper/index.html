@@ -13,962 +13,1395 @@
     <link href="css/css.css" rel="stylesheet">
     <link href="doc.css" rel="stylesheet">
 
-    <title>Visual style</title>
+    <title>CSS Framework Styles V2</title>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Themes</h1>
-        <p>Theme styles for projects.</p>
+<nav class="c-nav c-nav--fixed">
+    <a href="#" class="c-logo">STYL</a>
+    <a href="http://www.codedeveloper.co.uk" class="c-nav--link">CodeDeveloper Website</a>
+    <a href="#" class="c-nav--link is-active">Documentation</a>
+</nav>
 
-        <h3 id="container">Container</h3>
-        <p>The default container will responsively resize itself at small, medium, large, and x-large intervals.</p>
+<div class="c-container">
+    <h1>STYL - A CSS Framework V2</h1>
+    <p>This css stylesheet can be used for all projects.</p>
 
-        <p>You can also use a container which maintains the full width of the page at every breakpoint:</p>
+
+
+    <h3 id="namespace">CSS Namespaces</h3>
+    <p>This naming convention allows the css to ascertain exactly what kind of job a class might have, how and where it might be able to be reused, whether or not we can modify it, and more.</p>
+    <p>The types of namespace used here are:</p>
+
+    <ul>
+        <li>'c-' for Components</li>
+        <li>'o-' for Objects</li>
+        <li>'u-' for Utilities</li>
+        <li>'t-' for Themes</li>
+        <li>'js-' for Javascript Classes and Tests</li>
+        <li>is-/has- for States</li>
+    </ul>
+
+
+
+    <h3 id="bem">BEM Naming</h3>
+
+    <p>BEM works by breaking all classes in a codebase down into one of three groups:</p>
+
+    <ul>
+        <li>Block: The sole root of the component</li>
+        <li>Element: A component part of the Block</li>
+        <li>Modifier: A variant or extension of the Block</li>
+    </ul>
+
+    <p>Blocks, Elements, and Modifiers: BEM. Absolutely every class in a project fits into one of these categories, which is why BEM is so great—it’s incredibly simple and straightforward.</p>
+    <p>The point of BEM is to give a lot more transparency and clarity in your markup. BEM tells developers how classes relate to each other, which is particularly useful in complex or deep pieces of DOM.</p>
+
+
+
+    <h3 id="colours">Colours</h3>
+    <div class="row">
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--turquoise"></span>
+                <strong>t-colour--turquoise</strong>
+                <p>#1abc9c</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--green-sea"></span>
+                <strong>t-colour--green-sea</strong>
+                <p>#16a085</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--emerald"></span>
+                <strong>t-colour--emerald</strong>
+                <p>#2ecc71</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--nephritis"></span>
+                <strong>t-colour--nephritis</strong>
+                <p>#27ae60</p>
+            </div>
+        </div>
     </div>
 
-    <div class="container container--full-width t-background">
-        <p>This container uses the <code>container--full-width</code> modifier to accomodate full-width sites.</p>
+
+    <div class="row">
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--peter-river"></span>
+                <strong>t-colour--peter-river</strong>
+                <p>#3498db</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--belize-hole"></span>
+                <strong>t-colour--belize-hole</strong>
+                <p>#2980b9</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--amethyst"></span>
+                <strong>t-colour--amethyst</strong>
+                <p>#9b59b6</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--wisteria"></span>
+                <strong>t-colour--wisteria</strong>
+                <p>#8e44ad</p>
+            </div>
+        </div>
     </div>
 
-    <div class="container">
-        <h3 id="grid">Grid</h3>
-        <p>The grid uses flexbox to arrange columnumns. By default, columnumns will fill the available space equally.</p>
 
-        <div class="row u-margin-bottom--10">
-            <div class="column t-background">
-                column
+    <div class="row">
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--wet-asphalt"></span>
+                <strong>t-colour--wet-asphalt</strong>
+                <p>#34495e</p>
             </div>
         </div>
 
-        <div class="row u-margin-bottom--10">
-            <div class="column t-background">
-                column
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--midnight-blue"></span>
+                <strong>t-colour--midnight-blue</strong>
+                <p>#2c3e50</p>
             </div>
-            <div class="column t-background-alternate">
-                column
-            </div>
-            <div class="column t-background">
-                column
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column t-background">
-                column
-            </div>
-            <div class="column t-background-alternate">
-                column
-            </div>
-            <div class="column t-background">
-                column
-            </div>
-            <div class="column t-background-alternate">
-                column
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column t-background">
-                column
-            </div>
-            <div class="column t-background-alternate">
-                column
-            </div>
-            <div class="column t-background">
-                column
-            </div>
-            <div class="column t-background-alternate">
-                column
-            </div>
-            <div class="column t-background">
-                column
-            </div>
-        </div>
-
-        <p>The grid is divisible by 12 by using <code>column column--[number]</code></p>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--1 t-background">
-                column column--1
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--2 t-background">
-                column column--2
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--3 t-background">
-                column column--3
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--4 t-background">
-                column column--4
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--5 t-background">
-                column column--5
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--6 t-background">
-                column column--6
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--7 t-background">
-                column column--7
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--8 t-background">
-                column column--8
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--9 t-background">
-                column column--9
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--10 t-background">
-                column column--10
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--11 t-background">
-                column column--11
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--12 t-background">
-                column column--12
-            </div>
-        </div>
-
-        <p>You can mix fixed width columnumns with flexible columnumns to create custom layouts.</p>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--4 t-background">
-                column column--4
-            </div>
-
-            <div class="column t-background-alternate">
-                column
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column t-background-alternate">
-                column
-            </div>
-
-            <div class="column column--3 t-background">
-                column column--3
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--2 t-background">
-                column column--2
-            </div>
-
-            <div class="column t-background-alternate">
-                column
-            </div>
-
-            <div class="column column--2 t-background">
-                column column--2
-            </div>
-        </div>
-
-
-        <h3>Grid gutters</h3>
-        <p>You can add gutters to a grid using the modifier <code>row--gutter</code></p>
-
-        <div class="row row--gutter u-margin-bottom--10">
-            <div class="column">
-                <div class="t-background">
-                    column
-                </div>
-            </div>
-            <div class="column">
-                <div class="t-background-alternate">
-                    column
-                </div>
-            </div>
-            <div class="column">
-                <div class="t-background">
-                    column
-                </div>
-            </div>
-            <div class="column">
-                <div class="t-background-alternate">
-                    column
-                </div>
-            </div>
-        </div>
-
-
-        <h3>Grid utilities</h3>
-
-        <p>Horizontally align columnumns to the start of a row using the row modifier <code>row--justify-left</code>.</p>
-
-        <div class="row row--justify-left u-margin-bottom--10">
-            <div class="column column--4 t-background">
-                column column--4
-            </div>
-        </div>
-
-        <p>Horizontally align columnumns to the center of a row using the row modifier <code>row--justify-center</code>.</p>
-
-        <div class="row row--justify-center u-margin-bottom--10">
-            <div class="column column--4 t-background">
-                column column--4
-            </div>
-        </div>
-
-        <p>Horizontally align columnumns to the end of a row using the row modifier <code>row--justify-right</code>.</p>
-
-        <div class="row row--justify-right u-margin-bottom--10">
-            <div class="column column--4 t-background">
-                column column--4
-            </div>
-        </div>
-
-        <p>Vertically align columnumns to the start of a row using the row modifier <code>row--align-top</code>.</p>
-
-        <div class="row row--align-top u-margin-bottom--10">
-            <div class="column column--4 t-background">
-                column column--4
-            </div>
-            <div class="column t-background-alternate" style="height: 80px;">
-                column
-            </div>
-        </div>
-
-        <p>Vertically align columnumns to the center of a row using the row modifier <code>row--align-center</code>.</p>
-
-        <div class="row row--align-center u-margin-bottom--10">
-            <div class="column column--4 t-background">
-                column column--4
-            </div>
-            <div class="column t-background-alternate" style="height: 80px;">
-                column
-            </div>
-        </div>
-
-        <p>Vertically align columnumns to the end of a row using the row modifier <code>row--align-bottom</code>.</p>
-
-        <div class="row row--align-bottom u-margin-bottom--10">
-            <div class="column column--4 t-background">
-                column column--4
-            </div>
-            <div class="column t-background-alternate" style="height: 80px;">
-                column
-            </div>
-        </div>
-
-        <p>Stretch columnumns equal heights using the row modifier <code>row--stretch</code>.</p>
-
-        <div class="row row--stretch u-margin-bottom--10">
-            <div class="column column--4 t-background">
-                column column--4
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt leo lorem, ut aliquam nisl egestas sit amet.</p>
-            </div>
-            <div class="column t-background-alternate">
-                column
-            </div>
-        </div>
-
-        <p>Align columnumns in a vertical grid using the row modifier <code>row--columnumn</code>.</p>
-
-        <div class="row row--columnumn row--stretch u-margin-bottom--10">
-            <div class="column t-background">
-                column
-            </div>
-
-            <div class="column">
-                column
-            </div>
-
-            <div class="column t-background">
-                column
-            </div>
-
-            <div class="column">
-                column
-            </div>
-        </div>
-
-        <p>Horizontally rearrange a single columnumn using the column modifiers <code>column--pull-left</code>, and <code>column--pull-right</code>.</p>
-
-        <div class="row row--align-bottom u-margin-bottom--10">
-            <div class="column column--pull-right t-background">
-                column column--pull-right (1)
-            </div>
-            <div class="column column--pull-left t-background">
-                column column--pull-left (2)
-            </div>
-            <div class="column t-background-alternate">
-                column (3)
-            </div>
-        </div>
-
-        <p>These can also be applied conditionally based on viewport size using the column modifiers <code>column--pull-left-*</code>, and <code>column--pull-right-*</code>.</p>
-
-        <div class="row row--align-bottom u-margin-bottom--10">
-            <div class="column column--pull-right-m t-background">
-                column column--pull-right-m (1)
-            </div>
-            <div class="column column--pull-left-l t-background">
-                column column--pull-left-l (2)
-            </div>
-            <div class="column t-background-alternate">
-                column (3)
-            </div>
-        </div>
-
-        <p>Vertically align a single columnumn using the column modifiers <code>column--align-top</code>, <code>column--align-center</code>, and <code>column--align-bottom</code>.</p>
-
-        <div class="row row--align-bottom u-margin-bottom--10">
-            <div class="column column--align-top t-background">
-                column column--align-top
-            </div>
-            <div class="column column--align-center t-background">
-                column column--align-center
-            </div>
-            <div class="column column--align-bottom t-background">
-                column column--align-bottom
-            </div>
-            <div class="column t-background-alternate" style="height: 120px;">
-                column
-            </div>
-        </div>
-
-
-        <h3 id="typography">Typography</h3>
-        <p>Base font sizes: <code>h1, h2, h3, h4, h5, h6, p</code></p>
-
-        <h1>Heading - h1</h1>
-        <h2>Heading - h2</h2>
-        <h3>Heading - h3</h3>
-        <h4>Heading - h4</h4>
-        <h5>Heading - h5</h5>
-        <h6>Heading - h6</h6>
-
-        <p>Paragraph - p</p>
-
-        <p>Link <a href="javascript:void(0)">example link</a>.</p>
-
-
-        <h3 id="buttons">Buttons</h3>
-        <p>Buttons can be added by adding a class to an <code>a</code> tag: <code>o-button</code></p>
-
-        <div class="row row--stretch u-margin-bottom--10">
-            <div class="column">
-                <a href="javascript:void(0);" class="o-button">Button</a>
-            </div>
-
-            <div class="column">
-                <a href="javascript:void(0);" class="o-button disabled">Button disabled</a>
-            </div>
-        </div>
-
-        <p>Primary, secondary and tertiary buttons: <code>o-button--[primary, secondary, tertiary]</code></p>
-
-        <div class="row row--stretch u-margin-bottom--10">
-            <div class="column">
-                <a href="javascript:void(0);" class="o-button--primary">Primary button</a>
-            </div>
-
-            <div class="column">
-                <a href="javascript:void(0);" class="o-button--primary disabled">Primary button disabled</a>
-            </div>
-        </div>
-
-        <div class="row row--stretch u-margin-bottom--10">
-            <div class="column">
-                <a href="javascript:void(0);" class="o-button--secondary">Secondary button</a>
-            </div>
-
-            <div class="column">
-                <a href="javascript:void(0);" class="o-button--secondary disabled">Secondary button disabled</a>
-            </div>
-        </div>
-
-        <div class="row row--stretch u-margin-bottom--10">
-            <div class="column">
-                <a href="javascript:void(0);" class="o-button--tertiary">Tertiary button</a>
-            </div>
-
-            <div class="column">
-                <a href="javascript:void(0);" class="o-button--tertiary disabled">Tertiary button disabled</a>
-            </div>
-        </div>
-
-        <p>Link only buttons: <code>o-button o-button--link</code></p>
-
-        <div class="row row--stretch u-margin-bottom--10">
-            <div class="column">
-                <a href="javascript:void(0);" class="o-button o-button--link">Link button</a>
-            </div>
-        </div>
-
-        <p>Full width buttons: <code>o-button o-button--block</code></p>
-
-        <div class="row row--stretch u-margin-bottom--10">
-            <div class="column">
-                <a href="javascript:void(0);" class="o-button o-button--block">Block button</a>
-            </div>
-        </div>
-
-        <p>Customised buttons: <code>o-button o-button--[large, small, square]</code></p>
-
-        <div class="row row--stretch u-margin-bottom--10">
-            <div class="column">
-                <a href="javascript:void(0);" class="o-button o-button--large o-button--primary">Primary button (Large)</a>
-            </div>
-
-            <div class="column">
-                <a href="javascript:void(0);" class="o-button o-button--small o-button--primary">Primary button (Small)</a>
-            </div>
-
-            <div class="column">
-                <a href="javascript:void(0);" class="o-button o-button--square">Square button</a>
-            </div>
-        </div>
-
-
-        <h3 id="tables">Tables</h3>
-        <p></p>
-
-        <div class="row row--stretch u-margin-bottom--10">
-            <div class="column">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Header 1</th>
-                            <th>Header 2</th>
-                            <th>Header 3</th>
-                            <th>Header 4</th>
-                        </tr>
-                    </thead>
-
-                    <tfoot>
-                        <tr>
-                            <td>Footer 1</td>
-                            <td>Footer 2</td>
-                            <td>Footer 3</td>
-                            <td>Footer 4</td>
-                        </tr>
-                    </tfoot>
-
-                    <tbody>
-                        <tr>
-                            <td>Body 1</td>
-                            <td>Body 2</td>
-                            <td>Body 3</td>
-                            <td>Body 4</td>
-                        </tr>
-                        <tr>
-                            <td>Body 1</td>
-                            <td>Body 2</td>
-                            <td>Body 3</td>
-                            <td>Body 4</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
-        <h3 id="forms">Forms</h3>
-
-        <div class="form-group">
-            <label class="form-label" for="textinput1">
-                Text input
-                <span class="form-label__hint">You can also add hint text</span>
-            </label>
-
-            <input type="text" id="textinput1" name="textinput1">
-        </div>
-
-        <div class="form-group form-group--error">
-            <label class="form-label" for="textinput2">Error input</label>
-            <input type="text" id="textinput2" name="textinput2">
-            <p class="form-group__error-message">Optional error message text.</p>
-        </div>
-
-        <div class="form-group">
-            <label class="form-label" for="textarea">Textarea</label>
-            <textarea id="textarea1" name="textarea1"></textarea>
-        </div>
-
-        <div class="form-group form-group--error">
-            <label class="form-label" for="textarea">Textarea with error</label>
-            <textarea id="textarea1" name="textarea1"></textarea>
-        </div>
-
-        <div class="form-group">
-            <label class="form-label" for="select1">Select</label>
-
-            <select id="select1" name="select1">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-        </div>
-
-        <div class="form-group form-group--error">
-            <label class="form-label" for="select2">Select with error</label>
-
-            <select id="select2" name="select2">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-        </div>
-
-        <p>Inputs, textareas and selects can have a width specified using the same <code>column--*</code> modifier classes as the grid.</p>
-
-        <div class="form-group">
-            <label class="form-label" for="textinput1">Text input</label>
-            <input type="text" id="textinput1" name="textinput1" class="column--5">
-        </div>
-
-        <div class="form-group">
-            <label class="form-label" for="textarea">Textarea</label>
-            <textarea id="textarea1" name="textarea1" class="column--9"></textarea>
-        </div>
-
-        <div class="form-group">
-            <label class="form-label" for="select1">Select</label>
-
-            <select id="select1" name="select1" class="column--7">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-            </select>
-        </div>
-
-
-
-        <div class="form-group">
-            <label class="form-label">Label</label>
-            <label class="form-checkbox">
-                <input type="checkbox" id="checkbox1" name="checkbox1">
-                <span>Checkbox</span>
-            </label>
-            <label class="form-checkbox">
-                <input type="checkbox" id="checkbox2" name="checkbox2">
-                <span>Checkbox</span>
-            </label>
-        </div>
-
-        <div class="form-group form-group--error">
-            <label class="form-label">Label</label>
-            <label class="form-checkbox">
-                <input type="checkbox" id="checkbox3" name="checkbox3">
-                <span>Checkbox with error</span>
-            </label>
-            <label class="form-checkbox">
-                <input type="checkbox" id="checkbox4" name="checkbox4">
-                <span>Checkbox with error</span>
-            </label>
-        </div>
-
-        <div class="form-group">
-            <label class="form-label">Label</label>
-            <label class="form-radio">
-                <input type="radio" id="radio11" name="radio1">
-                <span>Radio button</span>
-            </label>
-            <label class="form-radio">
-                <input type="radio" id="radio12" name="radio1">
-                <span>Radio button</span>
-            </label>
-        </div>
-
-        <div class="form-group form-group--error">
-            <label class="form-label">Label</label>
-            <label class="form-radio">
-                <input type="radio" id="radio21" name="radio2">
-                <span>Radio button with error</span>
-            </label>
-            <label class="form-radio">
-                <input type="radio" id="radio22" name="radio2">
-                <span>Radio button with error</span>
-            </label>
-        </div>
-
-
-        <h3 id="alerts">Alerts</h3>
-        <p>To be displayed when an event occurs: <code>c-alert c-alert--[success, error]</code></p>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column">
-                <div class="c-alert c-alert--success">
-                    <p>Successful alert</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column">
-                <div class="c-alert c-alert--success">
-                    <p>Successful alert</p>
-                    <p>Multiple lines of text</p>
-                    <p>Multiple lines of text</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column">
-                <div class="c-alert c-alert--error">
-                    <p>Error alert</p>
-                </div>
-            </div>
-        </div>
-
-
-        <h3 id="modals">Modals</h3>
-        <p>Adding modals can be achieved by adding:</p>
-        <p><code>c-modal c-modal__overlay</code></p>
-        <p>Active modals use:</p>
-        <p><code>c-modal c-modal__overlay is-active</code></p>
-        <p>To add content use:</p>
-        <p><code>c-modal__content</code></p>
-        <p>To add a close button:</p>
-        <p><code> &lt;a class="c-modal__close"&gt;X&lt;/a&gt; </code></p>
-
-        <div class="row row--stretch u-margin-bottom--10">
-            <div class="column">
-                <a href="javascript:openModal();" class="o-button">Open modal</a>
-            </div>
-        </div>
-
-        <div class="c-modal c-modal__overlay" id="modal-example">
-            <div class="c-modal__content">
-                <a href="javascript:closeModal();" class="c-modal__close">X</a>
-
-                <h3 class="u-margin-top--0">Modal title</h3>
-                <p>Modal text</p>
-
-                <a href="javascript:closeModal();" class="o-button">Close modal</a>
-            </div>
-        </div>
-
-
-        <h3 id="tabs">Tabs</h3>
-        <p>Adding tabs con be achieved by adding:</p>
-        <p><code>c-tabs c-tabs__navigation</code></p>
-        <p>Active tabs use:</p>
-        <p><code>a is-active</code></p>
-        <p>To add content use:</p>
-        <p><code>c-tabs c-tabs__content</code></p>
-        <p>Active content use:</p>
-        <p><code>c-tabs c-tabs__content is-active</code></p>
-
-        <div class="c-tabs u-margin-bottom--10">
-            <div class="c-tabs__navigation">
-                <a class="is-active">Tab 1</a>
-                <a>Tab 2</a>
-                <a>Tab 3</a>
-            </div>
-
-            <div class="c-tabs__content is-active">
-                <p>Tab content 1, Tab content 1, Tab content 1, Tab content 1, Tab content 1</p>
-            </div>
-
-            <div class="c-tabs__content">
-                <p></p>
-            </div>
-
-            <div class="c-tabs__content">
-                <p></p>
-            </div>
-        </div>
-
-        <div class="c-tabs u-margin-bottom--10">
-            <div class="c-tabs__navigation">
-                <a>Tab 1</a>
-                <a class="is-active">Tab 2</a>
-                <a>Tab 3</a>
-            </div>
-
-            <div class="c-tabs__content">
-                <p></p>
-            </div>
-
-            <div class="c-tabs__content is-active">
-                <p>Tab content 2, Tab content 2, Tab content 2, Tab content 2, Tab content 2</p>
-            </div>
-
-            <div class="c-tabs__content">
-                <p></p>
-            </div>
-        </div>
-
-        <h4 class="u-margin-top--40 u-margin-bottom--20">Padded content within a smaller div</h4>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column column--4">
-                <div class="c-tabs u-margin-bottom--10">
-                    <div class="c-tabs__navigation">
-                        <a>Tab 1</a>
-                        <a>Tab 2</a>
-                        <a class="is-active">Tab 3</a>
-                    </div>
-
-                    <div class="c-tabs__content">
-                        <p></p>
-                    </div>
-
-                    <div class="c-tabs__content">
-                        <p></p>
-                    </div>
-
-                    <div class="c-tabs__content u-padding--20 is-active">
-                        <p class="u-margin--0">Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <h3 id="margins">Margins</h3>
-        <p>Margin classes can be used as follows: <code>u-margin--[number]</code></p>
-        <p>Margin classes range from 0 to 100 in increments of 10</p>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column">
-                <code class="u-margin--0">u-margin--0</code>
-                <code class="u-margin--10">u-margin--10</code>
-                <code class="u-margin--20">u-margin--20</code>
-                <code class="u-margin--30">u-margin--30</code>
-                <code class="u-margin--40">u-margin--40</code>
-                <code class="u-margin--50">u-margin--50</code>
-                <code class="u-margin--60">u-margin--60</code>
-                <code class="u-margin--70">u-margin--70</code>
-                <code class="u-margin--80">u-margin--80</code>
-                <code class="u-margin--90">u-margin--90</code>
-                <code class="u-margin--100">u-margin--100</code>
-            </div>
-        </div>
-
-        <p>Margin Y (top/bottom)</p>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column">
-                <code class="u-margin-y--30">u-margin-y--50</code>
-            </div>
-        </div>
-
-        <p>Margin X (left/right)</p>
-
-        <div class="row u-margin-bottom--10">
-            <div class="column">
-                <code class="u-margin-x--30">u-margin-x--50</code>
-            </div>
-        </div>
-
-
-        <h3 id="padding">Padding</h3>
-        <p>Padding classes can be used as follows: <code>u-padding--[number]</code></p>
-        <p>Padding classes range from 0 to 100 in increments of 10</p>
-
-        <div class="row u-padding-up--10">
-            <div class="column column--6">
-                <code class="u-padding--0">u-padding--0</code>
-            </div>
-
-            <div class="column column--6">
-                <code class="u-padding--10">u-padding--10</code>
-            </div>
-        </div>
-
-        <div class="row u-padding-up--10">
-            <div class="column column--6">
-                <code class="u-padding--20">u-padding--20</code>
-            </div>
-
-            <div class="column column--6">
-                 <code class="u-padding--30">u-padding--30</code>
-            </div>
-        </div>
-
-        <div class="row u-padding-up--10">
-            <div class="column column--6">
-                <code class="u-padding--40">u-padding--40</code>
-            </div>
-
-            <div class="column column--6">
-                <code class="u-padding--50">u-padding--50</code>
-            </div>
-        </div>
-
-        <div class="row u-padding-up--10">
-            <div class="column column--6">
-                <code class="u-padding--60">u-padding--60</code>
-            </div>
-
-            <div class="column column--6">
-                <code class="u-padding--70">u-padding--70</code>
-            </div>
-        </div>
-
-        <div class="row u-padding-up--10">
-            <div class="column column--6">
-                <code class="u-padding--80">u-padding--80</code>
-            </div>
-
-            <div class="column column--6">
-                <code class="u-padding--90">u-padding--90</code>
-            </div>
-        </div>
-
-        <div class="row u-padding-up--10">
-            <div class="column column--6">
-                <code class="u-padding--100">u-padding--100</code>
-            </div>
-        </div>
-
-        <p>Padding Y (top/bottom)</p>
-
-        <div class="row u-padding-up--10">
-            <div class="column">
-                <code class="u-padding-y--30">u-padding-y--50</code>
-            </div>
-        </div>
-
-        <p>Padding X (left/right)</p>
-
-        <div class="row u-padding-up--10">
-            <div class="column">
-                <code class="u-padding-x--30">u-padding-x--50</code>
-            </div>
-        </div>
-
-        <h3 id="hiding" class="u-margin-top--30 u-margin-bottom--10">Hiding content</h3>
-        <p>Content can be hidden using the class <code>.u-hidden</code>.
-
-        <p>Classes are also available to show and hide content based on media query breakpoints.</p>
-        <p>These classes follow the patterns <code>.u-hidden-*--up</code>, <code>.u-hidden-*--only</code> and <code>.u-hidden-*--down</code> for devices ≥, == or ≤ the specified size respectively.</p>
-
-        <div class="row row--stretch u-margin-bottom--10">
-            <div class="column row row--stretch u-padding--10">
-                <div class="column u-hidden-s--down t-neutral u-padding--10">
-                    <code>.u-hidden-s--down</code> is NOT active.
-                </div>
-                <div class="column u-hidden-m--up t-positive u-padding--10">
-                    <code>.u-hidden-s--down</code> is active.
-                </div>
-            </div>
-            <div class="column row row--stretch u-padding--10">
-                <div class="column u-hidden-m--down t-neutral u-padding--10">
-                    <code>.u-hidden-m--down</code> is NOT active.
-                </div>
-                <div class="column u-hidden-l--up t-positive u-padding--10">
-                    <code>.u-hidden-m--down</code> is active.
-                </div>
-            </div>
-            <div class="column row row--stretch u-padding--10">
-                <div class="column u-hidden-l--down t-neutral u-padding--10">
-                    <code>.u-hidden-l--down</code> is NOT active.
-                </div>
-                <div class="column u-hidden-xl--up t-positive u-padding--10">
-                    <code>.u-hidden-l--down</code> is active.
-                </div>
-            </div>
-            <div class="column row row--stretch u-padding--10">
-                <div class="column t-positive u-padding--10">
-                    <code>.u-hidden-xl--down</code> is <em>always</em> active.
-                </div>
-            </div>
         </div>
 
-        <div class="row row--stretch u-margin-bottom--10">
-            <div class="column row row--stretch u-padding--10">
-                <div class="column t-positive u-padding--10">
-                    <code>.u-hidden-s--up</code> is <em>always</em> active.
-                </div>
-            </div>
-            <div class="column row row--stretch u-padding--10">
-                <div class="column u-hidden-m--up t-neutral u-padding--10">
-                    <code>.u-hidden-m--up</code> is NOT active.
-                </div>
-                <div class="column u-hidden-s--down t-positive u-padding--10">
-                    <code>.u-hidden-m--up</code> is active.
-                </div>
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--sun-flower"></span>
+                <strong>t-colour--sun-flower</strong>
+                <p>#f1c40f</p>
             </div>
-            <div class="column row row--stretch u-padding--10">
-                <div class="column u-hidden-l--up t-neutral u-padding--10">
-                    <code>.u-hidden-l--up</code> is NOT active.
-                </div>
-                <div class="column u-hidden-m--down t-positive u-padding--10">
-                    <code>.u-hidden-l--up</code> is active.
-                </div>
-            </div>
-            <div class="column row row--stretch u-padding--10">
-                <div class="column u-hidden-xl--up t-neutral u-padding--10">
-                    <code>.u-hidden-xl--up</code> is NOT active.
-                </div>
-                <div class="column u-hidden-l--down t-positive u-padding--10">
-                    <code>.u-hidden-xl--up</code> is active.
-                </div>
-            </div>
         </div>
 
-        <div class="row row--stretch u-margin-bottom--10">
-            <div class="column row row--stretch u-padding--10">
-                <div class="column u-hidden-s--only t-neutral u-padding--10">
-                    <code>.u-hidden-s--only</code> is NOT active.
-                </div>
-                <div class="column u-hidden-m--up t-positive u-padding--10">
-                    <code>.u-hidden-s--only</code> is active.
-                </div>
-            </div>
-            <div class="column row row--stretch u-padding--10">
-                <div class="column u-hidden-m--only t-neutral u-padding--10">
-                    <code>.u-hidden-m--only</code> is NOT active.
-                </div>
-                <div class="column u-hidden-s--down u-hidden-l--up t-positive u-padding--10">
-                    <code>.u-hidden-m--only</code> is active.
-                </div>
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--orange"></span>
+                <strong>t-colour--orange</strong>
+                <p>#f39c12</p>
             </div>
-            <div class="column row row--stretch u-padding--10">
-                <div class="column u-hidden-l--only t-neutral u-padding--10">
-                    <code>.u-hidden-l--only</code> is NOT active.
-                </div>
-                <div class="column u-hidden-m--down u-hidden-xl--up t-positive u-padding--10">
-                    <code>.u-hidden-l--only</code> is active.
-                </div>
-            </div>
-            <div class="column row row--stretch u-padding--10">
-                <div class="column u-hidden-xl--only t-neutral u-padding--10">
-                    <code>.u-hidden-xl--only</code> is NOT active.
-                </div>
-                <div class="column u-hidden-l--down t-positive u-padding--10">
-                    <code>.u-hidden-xl--only</code> is active.
-                </div>
-            </div>
         </div>
-
     </div>
+
+
+    <div class="row">
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--carrot"></span>
+                <strong>t-colour--carrot</strong>
+                <p>#e67e22</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--pumpkin"></span>
+                <strong>t-colour--pumpkin</strong>
+                <p>#d35400</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--alizarin"></span>
+                <strong>t-colour--alizarin</strong>
+                <p>#e74c3c</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--pomegranate"></span>
+                <strong>t-colour--pomegranate</strong>
+                <p>#c0392b</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--clouds"></span>
+                <strong>t-colour--clouds</strong>
+                <p>#ecf0f1</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--silver"></span>
+                <strong>t-colour--silver</strong>
+                <p>#bdc3c7</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--concrete"></span>
+                <strong>t-colour--concrete</strong>
+                <p>#95a5a6</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--asbestos"></span>
+                <strong>t-colour--asbestos</strong>
+                <p>#7f8c8d</p>
+            </div>
+        </div>
+    </div>
+
+    <h3>Additional/Utility colours</h3>
+    <div class="row">
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--primary"></span>
+                <strong>t-colour--primary</strong>
+                <p>#3498db</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--secondary"></span>
+                <strong>t-colour--secondary</strong>
+                <p>#34495e</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--tertiary"></span>
+                <strong>t-colour--tertiary</strong>
+                <p>#bdc3c7</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--error"></span>
+                <strong>t-colour--error</strong>
+                <p>#c00</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-colour-palette">
+                <span class="t-background--success"></span>
+                <strong>t-colour--success</strong>
+                <p>#093</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h3 id="typography">Typography</h3>
+    <p>Base font sizes: <code>h1, h2, h3, h4, h5, h6, p</code></p>
+
+    <h1>Heading - h1</h1>
+    <h2>Heading - h2</h2>
+    <h3>Heading - h3</h3>
+    <h4>Heading - h4</h4>
+    <h5>Heading - h5</h5>
+    <h6>Heading - h6</h6>
+
+    <p>Paragraph - p</p>
+    <p>Link <a href="javascript:void(0)">example link</a>.</p>
+
+    <h4>Text utilities</h4>
+    <p>Utilities are available to set the text alignment:</p>
+
+    <div class="u-text--left"><code>u-text--left</code></div>
+    <div class="u-text--center"><code>u-text--center</code></div>
+    <div class="u-text--right"><code>u-text--right</code></div>
+
+    <p>These classes are also available at each responsive breakpoint:</p>
+
+    <div class="u-text--left-s"><code>u-text--left-s</code></div>
+    <div class="u-text--center-s"><code>u-text--center-s</code></div>
+    <div class="u-text--right-s"><code>u-text--right-s</code></div>
+
+    <div class="u-text--left-m"><code>u-text--left-m</code></div>
+    <div class="u-text--center-m"><code>u-text--center-m</code></div>
+    <div class="u-text--right-m"><code>u-text--right-m</code></div>
+
+    <div class="u-text--left-l"><code>u-text--left-l</code></div>
+    <div class="u-text--center-l"><code>u-text--center-l</code></div>
+    <div class="u-text--right-l"><code>u-text--right-l</code></div>
+
+    <div class="u-text--left-xl"><code>u-text--left-xl</code></div>
+    <div class="u-text--center-xl"><code>u-text--center-xl</code></div>
+    <div class="u-text--right-xl"><code>u-text--right-xl</code></div>
+
+
+
+    <h3 id="buttons">Buttons</h3>
+    <p>Buttons can be added by adding a class to an <code>a</code> tag: <code>o-button</code></p>
+
+    <div class="row row--stretch u-margin-bottom--10">
+        <div class="column">
+            <a href="javascript:void(0);" class="o-button">Button</a>
+        </div>
+
+        <div class="column">
+            <a href="javascript:void(0);" class="o-button disabled">Button disabled</a>
+        </div>
+    </div>
+
+    <p>Primary, secondary and tertiary buttons: <code>o-button--[primary, secondary, tertiary]</code></p>
+
+    <div class="row row--stretch u-margin-bottom--10">
+        <div class="column">
+            <a href="javascript:void(0);" class="o-button--primary">Primary button</a>
+        </div>
+
+        <div class="column">
+            <a href="javascript:void(0);" class="o-button--primary disabled">Primary button disabled</a>
+        </div>
+    </div>
+
+    <div class="row row--stretch u-margin-bottom--10">
+        <div class="column">
+            <a href="javascript:void(0);" class="o-button--secondary">Secondary button</a>
+        </div>
+
+        <div class="column">
+            <a href="javascript:void(0);" class="o-button--secondary disabled">Secondary button disabled</a>
+        </div>
+    </div>
+
+    <div class="row row--stretch u-margin-bottom--10">
+        <div class="column">
+            <a href="javascript:void(0);" class="o-button--tertiary">Tertiary button</a>
+        </div>
+
+        <div class="column">
+            <a href="javascript:void(0);" class="o-button--tertiary disabled">Tertiary button disabled</a>
+        </div>
+    </div>
+
+    <p>Link only buttons: <code>o-button o-button--link</code></p>
+
+    <div class="row row--stretch u-margin-bottom--10">
+        <div class="column">
+            <a href="javascript:void(0);" class="o-button o-button--link">Link button</a>
+        </div>
+    </div>
+
+    <p>Block buttons: <code>o-button o-button--block</code></p>
+
+    <div class="row row--stretch u-margin-bottom--10">
+        <div class="column">
+            <a href="javascript:void(0);" class="o-button o-button--block">Block button</a>
+        </div>
+    </div>
+
+    <p>Customised buttons: <code>o-button o-button--[large, small, square]</code></p>
+
+    <div class="row row--stretch u-margin-bottom--10">
+        <div class="column">
+            <a href="javascript:void(0);" class="o-button o-button--large o-button--primary">Primary button (Large)</a>
+        </div>
+
+        <div class="column">
+            <a href="javascript:void(0);" class="o-button o-button--small o-button--primary">Primary button (Small)</a>
+        </div>
+
+        <div class="column">
+            <a href="javascript:void(0);" class="o-button o-button--square">Square button</a>
+        </div>
+    </div>
+
+
+
+    <h3 id="container">Container</h3>
+    <p>The default container will responsively resize itself at small, medium, large, and x-large intervals.</p>
+    <p>This container uses the <code>c-container</code> to accommodate set width sites.</p>
+</div>
+
+<div class="c-container c-container--full-width t-background">
+    <p>You can also use a container which maintains the full width of the page at every breakpoint:</p>
+    <p>This container uses the <code>c-container--full-width</code> modifier to accommodate full-width sites.</p>
+</div>
+
+<div class="c-container">
+    <h3 id="grid">Grid</h3>
+    <p>The grid uses flexbox to arrange columns. By default, columns will fill the available space equally.</p>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column t-background">
+            column
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column t-background">
+            column
+        </div>
+
+        <div class="column t-background-alternate">
+            column
+        </div>
+
+        <div class="column t-background">
+            column
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column t-background">
+            column
+        </div>
+
+        <div class="column t-background-alternate">
+            column
+        </div>
+
+        <div class="column t-background">
+            column
+        </div>
+
+        <div class="column t-background-alternate">
+            column
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column t-background">
+            column
+        </div>
+
+        <div class="column t-background-alternate">
+            column
+        </div>
+
+        <div class="column t-background">
+            column
+        </div>
+
+        <div class="column t-background-alternate">
+            column
+        </div>
+
+        <div class="column t-background">
+            column
+        </div>
+    </div>
+
+    <p>The grid is divisible by 12 by using <code>column column--[number]</code></p>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--1 t-background">
+            column column--1
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--2 t-background">
+            column column--2
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--3 t-background">
+            column column--3
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--4 t-background">
+            column column--4
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--5 t-background">
+            column column--5
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--6 t-background">
+            column column--6
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--7 t-background">
+            column column--7
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--8 t-background">
+            column column--8
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--9 t-background">
+            column column--9
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--10 t-background">
+            column column--10
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--11 t-background">
+            column column--11
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--12 t-background">
+            column column--12
+        </div>
+    </div>
+
+    <p>You can mix fixed width columns with flexible columns to create custom layouts.</p>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--4 t-background">
+            column column--4
+        </div>
+
+        <div class="column t-background-alternate">
+            column
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column t-background-alternate">
+            column
+        </div>
+
+        <div class="column column--3 t-background">
+            column column--3
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--2 t-background">
+            column column--2
+        </div>
+
+        <div class="column t-background-alternate">
+            column
+        </div>
+
+        <div class="column column--2 t-background">
+            column column--2
+        </div>
+    </div>
+
+
+
+    <h3>Grid gutters</h3>
+    <p>You can add gutters to a grid using the modifier <code>row--gutter</code></p>
+
+    <div class="row row--gutter u-margin-bottom--10">
+        <div class="column">
+            <div class="t-background">
+                column
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-background-alternate">
+                column
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-background">
+                column
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="t-background-alternate">
+                column
+            </div>
+        </div>
+    </div>
+
+
+
+    <h3>Grid utilities</h3>
+    <p>Add a row separator using a <code>row__separator</code> element.</p>
+
+    <div class="row row--gutter u-margin-bottom--10">
+        <div class="column">
+            <div class="t-background" style="height:50px;">
+                column
+            </div>
+        </div>
+
+        <div class="row__separator"></div>
+
+        <div class="column">
+            <div class="t-background">
+                column
+            </div>
+        </div>
+    </div>
+
+    <p>This will automatically adjust for the row direction, for example:</p>
+
+    <div class="row row--column row--gutter u-margin-bottom--10">
+        <div class="column">
+            <div class="t-background">
+                column
+            </div>
+        </div>
+
+        <div class="row__separator"></div>
+
+        <div class="column">
+            <div class="t-background">
+                column
+            </div>
+        </div>
+    </div>
+
+    <p>Horizontally align columns to the start of a row using the row modifier <code>row--justify-left</code>.</p>
+
+    <div class="row row--justify-left u-margin-bottom--10">
+        <div class="column column--4 t-background">
+            column column--4
+        </div>
+    </div>
+
+    <p>Horizontally align columns to the center of a row using the row modifier <code>row--justify-center</code>.</p>
+
+    <div class="row row--justify-center u-margin-bottom--10">
+        <div class="column column--4 t-background">
+            column column--4
+        </div>
+    </div>
+
+    <p>Horizontally align columns to the end of a row using the row modifier <code>row--justify-right</code>.</p>
+
+    <div class="row row--justify-right u-margin-bottom--10">
+        <div class="column column--4 t-background">
+            column column--4
+        </div>
+    </div>
+
+    <p>Vertically align columns to the start of a row using the row modifier <code>row--align-top</code>.</p>
+
+    <div class="row row--align-top u-margin-bottom--10">
+        <div class="column column--4 t-background">
+            column column--4
+        </div>
+
+        <div class="column t-background-alternate" style="height: 80px;">
+            column
+        </div>
+    </div>
+
+    <p>Vertically align columns to the center of a row using the row modifier <code>row--align-center</code>.</p>
+
+    <div class="row row--align-center u-margin-bottom--10">
+        <div class="column column--4 t-background">
+            column column--4
+        </div>
+
+        <div class="column t-background-alternate" style="height: 80px;">
+            column
+        </div>
+    </div>
+
+    <p>Vertically align columns to the end of a row using the row modifier <code>row--align-bottom</code>.</p>
+
+    <div class="row row--align-bottom u-margin-bottom--10">
+        <div class="column column--4 t-background">
+            column column--4
+        </div>
+
+        <div class="column t-background-alternate" style="height: 80px;">
+            column
+        </div>
+    </div>
+
+    <p>Stretch columns equal heights using the row modifier <code>row--stretch</code>.</p>
+
+    <div class="row row--stretch u-margin-bottom--10">
+        <div class="column column--4 t-background">
+            column column--4
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt leo lorem, ut aliquam nisl egestas sit amet.</p>
+        </div>
+
+        <div class="column t-background-alternate">
+            column
+        </div>
+    </div>
+
+    <p>Align columns in a vertical grid using the row modifier <code>row--column</code>.</p>
+
+    <div class="row row--column row--stretch u-margin-bottom--10">
+        <div class="column t-background">
+            column
+        </div>
+
+        <div class="column">
+            column
+        </div>
+
+        <div class="column t-background">
+            column
+        </div>
+
+        <div class="column">
+            column
+        </div>
+    </div>
+
+    <p>Columns can responsively resize using the format <code>column--*-{s/m/l/xl}</code>.</p>
+
+    <div class="row row--align-bottom u-margin-bottom--10">
+        <div class="column column--3 column--6-m t-background">
+            column column--3 column--6-m
+        </div>
+
+        <div class="column t-background-alternate">
+            column
+        </div>
+    </div>
+
+    <p>Horizontally rearrange a single column using the column modifiers <code>column--pull-left</code>, and <code>column--pull-right</code>.</p>
+
+    <div class="row row--align-bottom u-margin-bottom--10">
+        <div class="column column--pull-right t-background">
+            column column--pull-right (1)
+        </div>
+
+        <div class="column column--pull-left t-background">
+            column column--pull-left (2)
+        </div>
+
+        <div class="column t-background-alternate">
+            column (3)
+        </div>
+    </div>
+
+    <p>These can also be applied conditionally based on viewport size using the column modifiers <code>column--pull-left-*</code>, and <code>column--pull-right-*</code>.</p>
+
+    <div class="row row--align-bottom u-margin-bottom--10">
+        <div class="column column--pull-right-m t-background">
+            column column--pull-right-m (1)
+        </div>
+
+        <div class="column column--pull-left-l t-background">
+            column column--pull-left-l (2)
+        </div>
+
+        <div class="column t-background-alternate">
+            column (3)
+        </div>
+    </div>
+
+    <p>Vertically align a single column using the column modifiers <code>column--align-top</code>, <code>column--align-center</code>, and <code>column--align-bottom</code>.</p>
+
+    <div class="row row--align-bottom u-margin-bottom--10">
+        <div class="column column--align-top t-background">
+            column column--align-top
+        </div>
+
+        <div class="column column--align-center t-background">
+            column column--align-center
+        </div>
+
+        <div class="column column--align-bottom t-background">
+            column column--align-bottom
+        </div>
+
+        <div class="column t-background-alternate" style="height: 120px;">
+            column
+        </div>
+    </div>
+
+
+
+    <h3 id="nav">Navigation</h3>
+
+    <nav class="c-nav">
+        <img src="http://placehold.it/200x60" />
+        <a href="#" class="c-nav--link is-active">Active Link</a>
+        <a href="#" class="c-nav--link">Link</a>
+        <a href="#" class="c-nav--link">Link</a>
+    </nav>
+
+    <p>Navigation header bar <code>c-nav</code> and to fix it to the top of the page use <code>c-nav c-nav--fixed</code></p>
+
+
+
+    <h3 id="tables">Tables</h3>
+
+    <div class="row row--stretch u-margin-bottom--10">
+        <div class="column">
+            <table>
+                <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                    <th>Header 4</th>
+                </tr>
+                </thead>
+
+                <tfoot>
+                <tr>
+                    <td>Footer 1</td>
+                    <td>Footer 2</td>
+                    <td class="u-text--center">Footer 3</td>
+                    <td class="u-text--right">Footer 4</td>
+                </tr>
+                </tfoot>
+
+                <tbody>
+                <tr>
+                    <td>Body 1</td>
+                    <td>Body 2</td>
+                    <td class="u-text--center">Body 3</td>
+                    <td class="u-text--right">Body 4</td>
+                </tr>
+                <tr>
+                    <td>Body 1</td>
+                    <td>Body 2</td>
+                    <td class="u-text--center">Body 3</td>
+                    <td class="u-text--right">Body 4</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <h3 id="forms">Forms</h3>
+
+    <div class="form-group">
+        <label class="form-label" for="textinput1">
+            Text input
+            <span class="form-label__hint">You can also add hint text</span>
+        </label>
+
+        <input type="text" id="textinput1" name="textinput1">
+    </div>
+
+    <div class="form-group form-group--error">
+        <label class="form-label" for="textinput2">Error input</label>
+        <input type="text" id="textinput2" name="textinput2">
+        <p class="form-group__error-message">Optional error message text.</p>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="textarea">Textarea</label>
+        <textarea id="textarea1" name="textarea1"></textarea>
+    </div>
+
+    <div class="form-group form-group--error">
+        <label class="form-label" for="textarea">Textarea with error</label>
+        <textarea id="textarea1" name="textarea1"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="select1">Select</label>
+
+        <select id="select1" name="select1">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+    </div>
+
+    <div class="form-group form-group--error">
+        <label class="form-label" for="select2">Select with error</label>
+
+        <select id="select2" name="select2">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+    </div>
+
+    <p>Inputs, textareas and selects can have a width specified using the same <code>column--*</code> modifier classes as the grid.</p>
+
+    <div class="form-group">
+        <label class="form-label" for="textinput1">Text input</label>
+        <input type="text" id="textinput1" name="textinput1" class="column--5">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="textarea">Textarea</label>
+        <textarea id="textarea1" name="textarea1" class="column--9"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="select1">Select</label>
+
+        <select id="select1" name="select1" class="column--7">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Label</label>
+
+        <label class="form-checkbox">
+            <input type="checkbox" id="checkbox1" name="checkbox1">
+            <span>Checkbox</span>
+        </label>
+
+        <label class="form-checkbox">
+            <input type="checkbox" id="checkbox2" name="checkbox2">
+            <span>Checkbox</span>
+        </label>
+    </div>
+
+    <div class="form-group form-group--error">
+        <label class="form-label">Label</label>
+
+        <label class="form-checkbox">
+            <input type="checkbox" id="checkbox3" name="checkbox3">
+            <span>Checkbox with error</span>
+        </label>
+
+        <label class="form-checkbox">
+            <input type="checkbox" id="checkbox4" name="checkbox4">
+            <span>Checkbox with error</span>
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Label</label>
+
+        <label class="form-radio">
+            <input type="radio" id="radio11" name="radio1">
+            <span>Radio button</span>
+        </label>
+
+        <label class="form-radio">
+            <input type="radio" id="radio12" name="radio1">
+            <span>Radio button</span>
+        </label>
+    </div>
+
+    <div class="form-group form-group--error">
+        <label class="form-label">Label</label>
+
+        <label class="form-radio">
+            <input type="radio" id="radio21" name="radio2">
+            <span>Radio button with error</span>
+        </label>
+
+        <label class="form-radio">
+            <input type="radio" id="radio22" name="radio2">
+            <span>Radio button with error</span>
+        </label>
+    </div>
+
+
+
+    <h3 id="alerts">Alerts</h3>
+    <p>To be displayed when an event occurs: <code>c-alert c-alert--[success, error]</code></p>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column">
+            <div class="c-alert c-alert--success">
+                <p>Successful alert</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column">
+            <div class="c-alert c-alert--success">
+                <p>Successful alert</p>
+                <p>Multiple lines of text</p>
+                <p>Multiple lines of text</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column">
+            <div class="c-alert c-alert--error">
+                <p>Error alert</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h3 id="modals">Modals</h3>
+    <p>Adding modals can be achieved by adding:</p>
+    <p><code>c-modal c-modal__overlay</code></p>
+    <p>Active modals use:</p>
+    <p><code>c-modal c-modal__overlay is-active</code></p>
+    <p>To add content use:</p>
+    <p><code>c-modal__content</code></p>
+    <p>To add a close button:</p>
+    <p><code> &lt;a class="c-modal__close"&gt;X&lt;/a&gt; </code></p>
+
+    <div class="row row--stretch u-margin-bottom--10">
+        <div class="column">
+            <a href="javascript:openModal();" class="o-button">Open modal</a>
+        </div>
+    </div>
+
+    <div class="c-modal c-modal__overlay" id="modal-example">
+        <div class="c-modal__content">
+            <a href="javascript:closeModal();" class="c-modal__close">X</a>
+
+            <h3 class="u-margin-top--0">Modal title</h3>
+            <p>Modal text</p>
+
+            <a href="javascript:closeModal();" class="o-button">Close modal</a>
+        </div>
+    </div>
+
+
+
+    <h3 id="tabs">Tabs</h3>
+    <p>Adding tabs can be achieved by adding:</p>
+    <p><code>c-tabs</code></p>
+    <p><code>c-tabs__navigation</code></p>
+    <p><code>a</code></p>
+    <p>Active tabs use:</p>
+    <p><code>a is-active</code></p>
+    <p>To add content use:</p>
+    <p><code>c-tabs__content</code></p>
+    <p>Active content use:</p>
+    <p><code>c-tabs__content is-active</code></p>
+
+    <div class="c-tabs u-margin-bottom--10">
+        <div class="c-tabs__navigation">
+            <a class="is-active">Tab 1</a>
+            <a>Tab 2</a>
+            <a>Tab 3</a>
+        </div>
+
+        <div class="c-tabs__content is-active">
+            <p>Tab content 1, Tab content 1, Tab content 1, Tab content 1, Tab content 1</p>
+        </div>
+
+        <div class="c-tabs__content">
+            <p></p>
+        </div>
+
+        <div class="c-tabs__content">
+            <p></p>
+        </div>
+    </div>
+
+    <div class="c-tabs u-margin-bottom--10">
+        <div class="c-tabs__navigation">
+            <a>Tab 1</a>
+            <a class="is-active">Tab 2</a>
+            <a>Tab 3</a>
+        </div>
+
+        <div class="c-tabs__content">
+            <p></p>
+        </div>
+
+        <div class="c-tabs__content is-active">
+            <p>Tab content 2, Tab content 2, Tab content 2, Tab content 2, Tab content 2</p>
+        </div>
+
+        <div class="c-tabs__content">
+            <p></p>
+        </div>
+    </div>
+
+    <h4 class="u-margin-top--40 u-margin-bottom--20">Padded content within a smaller div</h4>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column column--4">
+            <div class="c-tabs u-margin-bottom--10">
+                <div class="c-tabs__navigation">
+                    <a>Tab 1</a>
+                    <a>Tab 2</a>
+                    <a class="is-active">Tab 3</a>
+                </div>
+
+                <div class="c-tabs__content">
+                    <p></p>
+                </div>
+
+                <div class="c-tabs__content">
+                    <p></p>
+                </div>
+
+                <div class="c-tabs__content u-padding--20 is-active">
+                    <p class="u-margin--0">Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3, Tab content 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h3 id="margins">Margins</h3>
+    <p>Margin classes can be used as follows: <code>u-margin--[number]</code></p>
+    <p>Margin classes range from 0 to 100 in increments of 10</p>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column">
+            <code class="u-margin--0">u-margin--0</code>
+            <code class="u-margin--10">u-margin--10</code>
+            <code class="u-margin--20">u-margin--20</code>
+            <code class="u-margin--30">u-margin--30</code>
+            <code class="u-margin--40">u-margin--40</code>
+            <code class="u-margin--50">u-margin--50</code>
+            <code class="u-margin--60">u-margin--60</code>
+            <code class="u-margin--70">u-margin--70</code>
+            <code class="u-margin--80">u-margin--80</code>
+            <code class="u-margin--90">u-margin--90</code>
+            <code class="u-margin--100">u-margin--100</code>
+        </div>
+    </div>
+
+    <p>Margin Y (top/bottom)</p>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column">
+            <code class="u-margin-y--30">u-margin-y--50</code>
+        </div>
+    </div>
+
+    <p>Margin X (left/right)</p>
+
+    <div class="row u-margin-bottom--10">
+        <div class="column">
+            <code class="u-margin-x--30">u-margin-x--50</code>
+        </div>
+    </div>
+
+
+
+    <h3 id="padding">Padding</h3>
+    <p>Padding classes can be used as follows: <code>u-padding--[number]</code></p>
+    <p>Padding classes range from 0 to 100 in increments of 10</p>
+
+    <div class="row u-padding-bottom--10">
+        <div class="column column--6">
+            <code class="u-padding--0">u-padding--0</code>
+        </div>
+
+        <div class="column column--6">
+            <code class="u-padding--10">u-padding--10</code>
+        </div>
+    </div>
+
+    <div class="row u-padding-bottom--10">
+        <div class="column column--6">
+            <code class="u-padding--20">u-padding--20</code>
+        </div>
+
+        <div class="column column--6">
+            <code class="u-padding--30">u-padding--30</code>
+        </div>
+    </div>
+
+    <div class="row u-padding-bottom--10">
+        <div class="column column--6">
+            <code class="u-padding--40">u-padding--40</code>
+        </div>
+
+        <div class="column column--6">
+            <code class="u-padding--50">u-padding--50</code>
+        </div>
+    </div>
+
+    <div class="row u-padding-bottom--10">
+        <div class="column column--6">
+            <code class="u-padding--60">u-padding--60</code>
+        </div>
+
+        <div class="column column--6">
+            <code class="u-padding--70">u-padding--70</code>
+        </div>
+    </div>
+
+    <div class="row u-padding-bottom--10">
+        <div class="column column--6">
+            <code class="u-padding--80">u-padding--80</code>
+        </div>
+
+        <div class="column column--6">
+            <code class="u-padding--90">u-padding--90</code>
+        </div>
+    </div>
+
+    <div class="row u-padding-bottom--10">
+        <div class="column column--6">
+            <code class="u-padding--100">u-padding--100</code>
+        </div>
+    </div>
+
+    <p>Padding Y (top/bottom)</p>
+
+    <div class="row u-padding-bottom--10">
+        <div class="column">
+            <code class="u-padding-y--30">u-padding-y--50</code>
+        </div>
+    </div>
+
+    <p>Padding X (left/right)</p>
+
+    <div class="row u-padding-bottom--10">
+        <div class="column">
+            <code class="u-padding-x--30">u-padding-x--50</code>
+        </div>
+    </div>
+
+
+
+    <h3 id="hiding" class="u-margin-top--30 u-margin-bottom--10">Hiding content</h3>
+    <p>Content can be hidden using the class <code>.u-hidden</code>.
+
+    <p>Classes are also available to show and hide content based on media query breakpoints.</p>
+    <p>These classes follow the patterns <code>.u-hidden-*--up</code>, <code>.u-hidden-*--only</code> and <code>.u-hidden-*--down</code> for devices ≥, == or ≤ the specified size respectively.</p>
+
+    <div class="row row--stretch u-margin-bottom--10">
+        <div class="column row row--stretch u-padding--10">
+            <div class="column u-hidden-s--down t-neutral u-padding--10">
+                <code>.u-hidden-s--down</code> is NOT active.
+            </div>
+
+            <div class="column u-hidden-m--up t-positive u-padding--10">
+                <code>.u-hidden-s--down</code> is active.
+            </div>
+        </div>
+
+        <div class="column row row--stretch u-padding--10">
+            <div class="column u-hidden-m--down t-neutral u-padding--10">
+                <code>.u-hidden-m--down</code> is NOT active.
+            </div>
+
+            <div class="column u-hidden-l--up t-positive u-padding--10">
+                <code>.u-hidden-m--down</code> is active.
+            </div>
+        </div>
+
+        <div class="column row row--stretch u-padding--10">
+            <div class="column u-hidden-l--down t-neutral u-padding--10">
+                <code>.u-hidden-l--down</code> is NOT active.
+            </div>
+
+            <div class="column u-hidden-xl--up t-positive u-padding--10">
+                <code>.u-hidden-l--down</code> is active.
+            </div>
+        </div>
+
+        <div class="column row row--stretch u-padding--10">
+            <div class="column t-positive u-padding--10">
+                <code>.u-hidden-xl--down</code> is <em>always</em> active.
+            </div>
+        </div>
+    </div>
+
+    <div class="row row--stretch u-margin-bottom--10">
+        <div class="column row row--stretch u-padding--10">
+            <div class="column t-positive u-padding--10">
+                <code>.u-hidden-s--up</code> is <em>always</em> active.
+            </div>
+        </div>
+
+        <div class="column row row--stretch u-padding--10">
+            <div class="column u-hidden-m--up t-neutral u-padding--10">
+                <code>.u-hidden-m--up</code> is NOT active.
+            </div>
+
+            <div class="column u-hidden-s--down t-positive u-padding--10">
+                <code>.u-hidden-m--up</code> is active.
+            </div>
+        </div>
+
+        <div class="column row row--stretch u-padding--10">
+            <div class="column u-hidden-l--up t-neutral u-padding--10">
+                <code>.u-hidden-l--up</code> is NOT active.
+            </div>
+
+            <div class="column u-hidden-m--down t-positive u-padding--10">
+                <code>.u-hidden-l--up</code> is active.
+            </div>
+        </div>
+
+        <div class="column row row--stretch u-padding--10">
+            <div class="column u-hidden-xl--up t-neutral u-padding--10">
+                <code>.u-hidden-xl--up</code> is NOT active.
+            </div>
+
+            <div class="column u-hidden-l--down t-positive u-padding--10">
+                <code>.u-hidden-xl--up</code> is active.
+            </div>
+        </div>
+    </div>
+
+    <div class="row row--stretch u-margin-bottom--10">
+        <div class="column row row--stretch u-padding--10">
+            <div class="column u-hidden-s--only t-neutral u-padding--10">
+                <code>.u-hidden-s--only</code> is NOT active.
+            </div>
+
+            <div class="column u-hidden-m--up t-positive u-padding--10">
+                <code>.u-hidden-s--only</code> is active.
+            </div>
+        </div>
+
+        <div class="column row row--stretch u-padding--10">
+            <div class="column u-hidden-m--only t-neutral u-padding--10">
+                <code>.u-hidden-m--only</code> is NOT active.
+            </div>
+
+            <div class="column u-hidden-s--down u-hidden-l--up t-positive u-padding--10">
+                <code>.u-hidden-m--only</code> is active.
+            </div>
+        </div>
+
+        <div class="column row row--stretch u-padding--10">
+            <div class="column u-hidden-l--only t-neutral u-padding--10">
+                <code>.u-hidden-l--only</code> is NOT active.
+            </div>
+
+            <div class="column u-hidden-m--down u-hidden-xl--up t-positive u-padding--10">
+                <code>.u-hidden-l--only</code> is active.
+            </div>
+        </div>
+
+        <div class="column row row--stretch u-padding--10">
+            <div class="column u-hidden-xl--only t-neutral u-padding--10">
+                <code>.u-hidden-xl--only</code> is NOT active.
+            </div>
+
+            <div class="column u-hidden-l--down t-positive u-padding--10">
+                <code>.u-hidden-xl--only</code> is active.
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="c-footer u-text--center">
+    <p>CodeDeveloper &copy; 2020</p>
+</footer>
+
+
+
+<script type="text/javascript">
+    function openModal() {
+        let modal = document.getElementById('modal-example');
+
+        if (modal.classList) {
+            modal.classList.add('is-active');
+        } else {
+            modal.className += ' is-active';
+        }
+    }
+
+    function closeModal() {
+        let modal = document.getElementById('modal-example');
+
+        if (modal.classList) {
+            modal.classList.remove('is-active');
+        } else {
+            modal.className = modal.className.replace(/(^|\\b)is-active(\\b|$)/gi, ' ');
+        }
+    }
+</script>
 </body>
